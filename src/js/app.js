@@ -35,17 +35,17 @@ function render(variables = {}) {
   if (lastname == null) lastname = "";
   let carrera = variables.role;
   if (carrera == null) carrera = "";
-  let Ciudad = variables.city;
-  if (Ciudad == null) Ciudad = "";
-  let Pais = variables.country;
-  if (Pais == null) Pais = "";
+  let ciudad = variables.city;
+  if (ciudad == null) ciudad = "";
+  let pais = variables.country;
+  if (pais == null) pais = "";
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
           <h1>${name}  ${lastname}</h1> 
           <h2>${carrera}</h2>
-          <h3>${Ciudad + Pais}</h3>
+          <h3>${ciudad + " " + pais}</h3>
           <ul class=${variables.socialMediaPosition}>
             <li><a href="https://twitter.com/${
               variables.twitter
